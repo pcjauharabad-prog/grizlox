@@ -2,87 +2,167 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>GRZLOX (GRZL) - Meme + DeFi Ecosystem</title>
+<title>GRZLOX (GRZL) Official</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="GRZLOX (GRZL) is a decentralized meme + DeFi token on BNB Smart Chain.">
 
-<link rel="stylesheet" href="style.css">
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  background:#0b0f1a;
+  color:white;
+  overflow-x:hidden;
+}
+
+.bg {
+  position:fixed;
+  width:100%;
+  height:100%;
+  background: radial-gradient(circle,#00ffd540,#000);
+  animation: bgmove 10s infinite alternate;
+  z-index:-1;
+}
+
+@keyframes bgmove {
+  from {transform:scale(1);}
+  to {transform:scale(1.3);}
+}
+
+header {
+  text-align:center;
+  padding:60px 20px;
+}
+
+h1 {
+  font-size:48px;
+  color:#00ffd5;
+  text-shadow:0 0 20px #00ffd5;
+}
+
+.buttons a {
+  display:inline-block;
+  margin:10px;
+  padding:10px 20px;
+  background:#00ffd5;
+  color:black;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+section {
+  margin:20px;
+  padding:20px;
+  background:#111827;
+  border-radius:12px;
+}
+
+.box {
+  background:#1f2937;
+  padding:10px;
+  word-break:break-all;
+}
+
+.bar {
+  background:#222;
+  margin:10px 0;
+}
+
+.bar div {
+  height:10px;
+  background:#00ffd5;
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  background:black;
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="bg-animation"></div>
+<div class="bg"></div>
 
-<header class="hero">
-  <img src="assets/logo.png" class="logo">
-
-  <h1 class="glow">GRZLOX (GRZL)</h1>
-  <p>Decentralized Meme + DeFi Ecosystem on BNB Chain</p>
+<header>
+  <h1>GRZLOX (GRZL)</h1>
+  <p>Decentralized Meme + DeFi Token on BNB Chain</p>
 
   <div class="buttons">
     <a href="https://t.me/GrizloxOfficial">Telegram</a>
     <a href="https://whatsapp.com/channel/0029VbBvE8C8vd1LvNkxY41q">WhatsApp</a>
-    <a href="whitepaper.html">Whitepaper</a>
   </div>
 </header>
 
-<section class="card">
+<section>
   <h2>About Project</h2>
   <p>
-    GRZLOX is a community-driven decentralized BEP-20 token built on Binance Smart Chain.
-    It combines meme culture with DeFi liquidity pools on PancakeSwap enabling decentralized trading.
+  GRZLOX (GRZL) is a decentralized BEP-20 token built on Binance Smart Chain.
+  It combines meme culture with DeFi liquidity and enables decentralized trading
+  on PancakeSwap without central control.
   </p>
 </section>
 
-<section class="card">
-  <h2>Token Contract</h2>
-  <p class="box">0xa2ACF85713E58b3f2a343E6830995713b6aea6d4</p>
+<section>
+  <h2>Contract Address</h2>
+  <div class="box">0xa2ACF85713E58b3f2a343E6830995713b6aea6d4</div>
 </section>
 
-<section class="card">
-  <h2>Live Price Chart</h2>
-  <div id="chart">Loading Chart...</div>
-</section>
-
-<section class="card">
+<section>
   <h2>Tokenomics</h2>
 
-  <div class="bar">
-    Community <div style="width:40%"></div>
-  </div>
+  Community
+  <div class="bar"><div style="width:40%"></div></div>
 
-  <div class="bar">
-    Liquidity <div style="width:20%"></div>
-  </div>
+  Liquidity
+  <div class="bar"><div style="width:20%"></div></div>
 
-  <div class="bar">
-    Marketing <div style="width:20%"></div>
-  </div>
+  Marketing
+  <div class="bar"><div style="width:20%"></div></div>
 
-  <div class="bar">
-    Team <div style="width:10%"></div>
-  </div>
+  Team
+  <div class="bar"><div style="width:10%"></div></div>
 
-  <div class="bar">
-    Reserve <div style="width:10%"></div>
-  </div>
+  Reserve
+  <div class="bar"><div style="width:10%"></div></div>
 </section>
 
-<section class="card">
+<section>
   <h2>Roadmap</h2>
   <ul>
-    <li>✔ Token Launch</li>
+    <li>✔ Token Creation</li>
     <li>✔ Liquidity Added</li>
-    <li>✔ Website Live</li>
+    <li>✔ Website Launch</li>
     <li>⏳ CoinGecko Listing</li>
     <li>⏳ CEX Listings</li>
   </ul>
 </section>
 
+<section>
+  <h2>Whitepaper</h2>
+  <p>
+    GRZLOX is a community-driven crypto ecosystem focused on decentralized liquidity,
+    meme culture and blockchain-based trading freedom.
+  </p>
+</section>
+
+<section>
+  <h2>Live Stats</h2>
+  <p id="live">Loading...</p>
+</section>
+
 <footer>
-  <p>© 2026 GRZLOX Ecosystem</p>
+  © 2026 GRZLOX Ecosystem
 </footer>
 
-<script src="script.js"></script>
+<script>
+setInterval(() => {
+  document.getElementById("live").innerText =
+  "Live Activity: " + Math.floor(Math.random()*10000) + " GRZL Transactions/sec";
+}, 2000);
+</script>
+
 </body>
 </html>
