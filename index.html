@@ -5,45 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       margin:0;
       font-family:Arial;
       background:#050816;
       color:white;
-      line-height:1.7;
     }
 
     .bg{
       position:fixed;
-      width:900px;
-      height:900px;
+      width:1000px;
+      height:1000px;
       background:radial-gradient(circle,#22c55e,#3b82f6,#a855f7,transparent);
       filter:blur(160px);
       opacity:0.25;
       z-index:-1;
     }
 
-    .center{text-align:center;}
-
-    .card{
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.12);
-      padding:25px;
-      margin:20px auto;
-      max-width:1000px;
-      border-radius:18px;
+    /* NAVBAR */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:10;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 25px;
+      background:rgba(0,0,0,0.6);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.08);
     }
 
-    .title{
-      font-size:60px;
-      background:linear-gradient(90deg,#22c55e,#3b82f6,#a855f7);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      font-weight:bold;
+    .nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 10px;
+      font-size:14px;
+    }
+
+    .nav a:hover{
+      color:#22c55e;
     }
 
     .btn{
-      padding:12px 20px;
+      padding:10px 16px;
       border:none;
       border-radius:10px;
       font-weight:bold;
@@ -54,7 +63,44 @@
     .green{background:#22c55e;}
     .blue{background:#2563eb;color:white;}
 
+    .center{text-align:center;}
+
+    .title{
+      font-size:60px;
+      background:linear-gradient(90deg,#22c55e,#3b82f6,#a855f7);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      font-weight:bold;
+    }
+
+    .section{
+      padding:80px 20px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.12);
+      padding:25px;
+      margin:20px auto;
+      max-width:1000px;
+      border-radius:18px;
+      backdrop-filter: blur(12px);
+    }
+
+    .grid{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:15px;
+    }
+
+    .box{
+      width:220px;
+      text-align:center;
+    }
+
     a{color:#22c55e;text-decoration:none;}
+
   </style>
 </head>
 
@@ -62,11 +108,24 @@
 
 <div class="bg"></div>
 
+<!-- NAV -->
+<div class="nav">
+  <div><b>GRIZLOX</b></div>
+
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#community">Community</a>
+  </div>
+</div>
+
 <!-- HERO -->
-<div class="center" style="padding:80px 20px;">
+<div id="home" class="section center">
 
   <div style="
-    width:160px;height:160px;margin:auto;border-radius:50%;
+    width:170px;height:170px;margin:auto;border-radius:50%;
     background:linear-gradient(45deg,#22c55e,#3b82f6,#a855f7);
     display:flex;align-items:center;justify-content:center;
     font-size:28px;font-weight:bold;
@@ -78,8 +137,14 @@
   <h1 class="title">GRIZLOX (GRZL)</h1>
 
   <p style="color:#94a3b8;max-width:800px;margin:auto;">
-    A decentralized Web3 meme ecosystem built on Binance Smart Chain with community-driven growth and transparent blockchain structure.
+    A next-generation decentralized Web3 meme ecosystem built on Binance Smart Chain with community-driven growth, transparency, and long-term vision.
   </p>
+
+  <a href="https://pancakeswap.finance/swap?outputCurrency=0xa2ACF85713E58b3f2a343E6830995713b6aea6d4">
+    <button class="btn green">Buy GRZL</button>
+  </a>
+
+  <button class="btn blue">View Chart</button>
 
 </div>
 
@@ -87,32 +152,32 @@
 <div class="card center">
 
   <h2>Token Information</h2>
-  <p><b>Name:</b> GRIZLOX</p>
-  <p><b>Symbol:</b> GRZL</p>
   <p><b>Network:</b> BNB Smart Chain (BEP-20)</p>
-  <p><b>Total Supply:</b> 1,000,000,000 GRZL</p>
+  <p><b>Supply:</b> 1,000,000,000 GRZL</p>
+  <p><b>Contract:</b> 0xa2ACF85713E58b3f2a343E6830995713b6aea6d4</p>
 
 </div>
 
 <!-- ABOUT -->
-<div class="card">
+<div id="about" class="card">
 
   <h2 class="center">About GRIZLOX Ecosystem</h2>
 
   <p>
-    GRIZLOX is a decentralized meme-inspired Web3 token designed to combine blockchain technology with community-driven innovation. The ecosystem represents a digital creature concept that symbolizes evolution, adaptability, and decentralized intelligence.
+    GRIZLOX is a decentralized meme token designed as a Web3 ecosystem project combining blockchain technology with community-driven innovation.
   </p>
 
   <p>
-    The GRIZLOX ecosystem operates without centralized control, relying on smart contracts and community participation to maintain growth and transparency. It is designed to evolve from a meme token into a full Web3 ecosystem over time.
+    The GRIZLOX concept represents a digital evolutionary creature that symbolizes strength, adaptation, and decentralized intelligence in the crypto world.
   </p>
 
 </div>
 
 <!-- TOKENOMICS -->
-<div class="card center">
+<div id="tokenomics" class="card center">
 
   <h2>Tokenomics</h2>
+
   <p>🔥 Community: 40%</p>
   <p>💧 Liquidity: 20%</p>
   <p>📢 Marketing: 20%</p>
@@ -122,11 +187,11 @@
 </div>
 
 <!-- ROADMAP -->
-<div class="card">
+<div id="roadmap" class="card">
 
   <h2 class="center">Roadmap</h2>
 
-  <p>✔ Phase 1 — Token Creation & Launch</p>
+  <p>✔ Phase 1 — Launch & Branding</p>
   <p>✔ Phase 2 — Community Growth</p>
   <p>✔ Phase 3 — PancakeSwap Listing</p>
   <p>✔ Phase 4 — CoinGecko / CMC Listing</p>
@@ -134,36 +199,26 @@
 
 </div>
 
-<!-- CONTRACT -->
-<div class="card center">
-
-  <h2>Contract Address</h2>
-  <p style="word-break:break-all;">
-    0xa2ACF85713E58b3f2a343E6830995713b6aea6d4
-  </p>
-
-</div>
-
-<!-- COMMUNITY (FIXED - SINGLE CLEAN SECTION) -->
-<div class="card center">
+<!-- COMMUNITY -->
+<div id="community" class="card center">
 
   <h2>Community & Contact</h2>
 
   <p>📧 Email: grizloxofficial@gmail.com</p>
 
-  <p>
-    🔗 Telegram: <a href="https://t.me/GrizloxOfficial" target="_blank">Join Channel</a>
-  </p>
+  <a href="https://t.me/GrizloxOfficial" target="_blank">
+    <button class="btn blue">Telegram</button>
+  </a>
 
-  <p>
-    💬 WhatsApp: <a href="https://whatsapp.com/channel/0029VbBvE8C8vd1LvNkxY41q" target="_blank">Join Channel</a>
-  </p>
+  <a href="https://whatsapp.com/channel/0029VbBvE8C8vd1LvNkxY41q" target="_blank">
+    <button class="btn green">WhatsApp</button>
+  </a>
 
 </div>
 
 <!-- FOOTER -->
 <div class="center" style="padding:20px;color:#64748b;font-size:12px;">
-  © 2026 GRIZLOX Ecosystem — All Rights Reserved
+  © 2026 GRIZLOX — Web3 Ecosystem
 </div>
 
 </body>
