@@ -1,225 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>GRIZLOX (GRZL) - Web3 Ecosystem</title>
+  <meta charset="UTF-8">
+  <title>GRZLOX (GRZL) - Official DeFi Meme Token</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GRZLOX (GRZL) is a decentralized meme + DeFi token on BNB Smart Chain with community-driven ecosystem and PancakeSwap liquidity.">
 
-  <style>
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      margin:0;
-      font-family:Arial;
-      background:#050816;
-      color:white;
-    }
-
-    .bg{
-      position:fixed;
-      width:1000px;
-      height:1000px;
-      background:radial-gradient(circle,#22c55e,#3b82f6,#a855f7,transparent);
-      filter:blur(160px);
-      opacity:0.25;
-      z-index:-1;
-    }
-
-    /* NAVBAR */
-    .nav{
-      position:sticky;
-      top:0;
-      z-index:10;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:15px 25px;
-      background:rgba(0,0,0,0.6);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(255,255,255,0.08);
-    }
-
-    .nav a{
-      color:white;
-      text-decoration:none;
-      margin:0 10px;
-      font-size:14px;
-    }
-
-    .nav a:hover{
-      color:#22c55e;
-    }
-
-    .btn{
-      padding:10px 16px;
-      border:none;
-      border-radius:10px;
-      font-weight:bold;
-      cursor:pointer;
-      margin:5px;
-    }
-
-    .green{background:#22c55e;}
-    .blue{background:#2563eb;color:white;}
-
-    .center{text-align:center;}
-
-    .title{
-      font-size:60px;
-      background:linear-gradient(90deg,#22c55e,#3b82f6,#a855f7);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      font-weight:bold;
-    }
-
-    .section{
-      padding:80px 20px;
-    }
-
-    .card{
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.12);
-      padding:25px;
-      margin:20px auto;
-      max-width:1000px;
-      border-radius:18px;
-      backdrop-filter: blur(12px);
-    }
-
-    .grid{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:15px;
-    }
-
-    .box{
-      width:220px;
-      text-align:center;
-    }
-
-    a{color:#22c55e;text-decoration:none;}
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="bg"></div>
+<header class="hero">
+  <h1>GRZLOX (GRZL)</h1>
+  <p>Next-Gen Meme + DeFi Ecosystem on BNB Smart Chain</p>
 
-<!-- NAV -->
-<div class="nav">
-  <div><b>GRIZLOX</b></div>
-
-  <div>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#tokenomics">Tokenomics</a>
-    <a href="#roadmap">Roadmap</a>
-    <a href="#community">Community</a>
+  <div class="buttons">
+    <a href="https://t.me/GrizloxOfficial" target="_blank">Telegram</a>
+    <a href="https://whatsapp.com/channel/0029VbBvE8C8vd1LvNkxY41q" target="_blank">WhatsApp</a>
   </div>
-</div>
+</header>
 
-<!-- HERO -->
-<div id="home" class="section center">
-
-  <div style="
-    width:170px;height:170px;margin:auto;border-radius:50%;
-    background:linear-gradient(45deg,#22c55e,#3b82f6,#a855f7);
-    display:flex;align-items:center;justify-content:center;
-    font-size:28px;font-weight:bold;
-    box-shadow:0 0 120px #22c55e;
-  ">
-    GRZL
-  </div>
-
-  <h1 class="title">GRIZLOX (GRZL)</h1>
-
-  <p style="color:#94a3b8;max-width:800px;margin:auto;">
-    A next-generation decentralized Web3 meme ecosystem built on Binance Smart Chain with community-driven growth, transparency, and long-term vision.
-  </p>
-
-  <a href="https://pancakeswap.finance/swap?outputCurrency=0xa2ACF85713E58b3f2a343E6830995713b6aea6d4">
-    <button class="btn green">Buy GRZL</button>
-  </a>
-
-  <button class="btn blue">View Chart</button>
-
-</div>
-
-<!-- TOKEN INFO -->
-<div class="card center">
-
-  <h2>Token Information</h2>
-  <p><b>Network:</b> BNB Smart Chain (BEP-20)</p>
-  <p><b>Supply:</b> 1,000,000,000 GRZL</p>
-  <p><b>Contract:</b> 0xa2ACF85713E58b3f2a343E6830995713b6aea6d4</p>
-
-</div>
-
-<!-- ABOUT -->
-<div id="about" class="card">
-
-  <h2 class="center">About GRIZLOX Ecosystem</h2>
-
+<section>
+  <h2>About GRZLOX</h2>
   <p>
-    GRIZLOX is a decentralized meme token designed as a Web3 ecosystem project combining blockchain technology with community-driven innovation.
+    GRZLOX (GRZL) is a community-driven decentralized token built on Binance Smart Chain (BEP-20).
+    It combines meme culture with decentralized finance (DeFi) mechanisms, enabling users to trade
+    freely on PancakeSwap with full transparency and liquidity-based market structure.
   </p>
+</section>
 
-  <p>
-    The GRIZLOX concept represents a digital evolutionary creature that symbolizes strength, adaptation, and decentralized intelligence in the crypto world.
-  </p>
+<section>
+  <h2>Contract Address</h2>
+  <p class="box">0xa2ACF85713E58b3f2a343E6830995713b6aea6d4</p>
+</section>
 
-</div>
-
-<!-- TOKENOMICS -->
-<div id="tokenomics" class="card center">
-
+<section>
   <h2>Tokenomics</h2>
 
-  <p>🔥 Community: 40%</p>
-  <p>💧 Liquidity: 20%</p>
-  <p>📢 Marketing: 20%</p>
-  <p>👨‍💻 Team: 10%</p>
-  <p>🏦 Reserve: 10%</p>
+  <ul>
+    <li>Community: 40%</li>
+    <li>Liquidity: 20%</li>
+    <li>Marketing: 20%</li>
+    <li>Team: 10%</li>
+    <li>Reserve: 10%</li>
+  </ul>
+</section>
 
-</div>
+<section>
+  <h2>Roadmap</h2>
+  <ul>
+    <li>✔ Token Creation</li>
+    <li>✔ PancakeSwap Liquidity</li>
+    <li>✔ Website Launch</li>
+    <li>⏳ CoinGecko Listing</li>
+    <li>⏳ CEX Expansion</li>
+  </ul>
+</section>
 
-<!-- ROADMAP -->
-<div id="roadmap" class="card">
+<section>
+  <h2>Community</h2>
+  <p>Join our global decentralized community and grow the GRZLOX ecosystem.</p>
+</section>
 
-  <h2 class="center">Roadmap</h2>
+<footer>
+  <p>© 2026 GRZLOX (GRZL). All Rights Reserved.</p>
+</footer>
 
-  <p>✔ Phase 1 — Launch & Branding</p>
-  <p>✔ Phase 2 — Community Growth</p>
-  <p>✔ Phase 3 — PancakeSwap Listing</p>
-  <p>✔ Phase 4 — CoinGecko / CMC Listing</p>
-  <p>✔ Phase 5 — Ecosystem Expansion</p>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GRZLOX (GRZL) - Official DeFi Meme Token</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GRZLOX (GRZL) is a decentralized meme + DeFi token on BNB Smart Chain with community-driven ecosystem and PancakeSwap liquidity.">
 
-</div>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-<!-- COMMUNITY -->
-<div id="community" class="card center">
+<body>
 
-  <h2>Community & Contact</h2>
+<header class="hero">
+  <h1>GRZLOX (GRZL)</h1>
+  <p>Next-Gen Meme + DeFi Ecosystem on BNB Smart Chain</p>
 
-  <p>📧 Email: grizloxofficial@gmail.com</p>
+  <div class="buttons">
+    <a href="https://t.me/GrizloxOfficial" target="_blank">Telegram</a>
+    <a href="https://whatsapp.com/channel/0029VbBvE8C8vd1LvNkxY41q" target="_blank">WhatsApp</a>
+  </div>
+</header>
 
-  <a href="https://t.me/GrizloxOfficial" target="_blank">
-    <button class="btn blue">Telegram</button>
-  </a>
+<section>
+  <h2>About GRZLOX</h2>
+  <p>
+    GRZLOX (GRZL) is a community-driven decentralized token built on Binance Smart Chain (BEP-20).
+    It combines meme culture with decentralized finance (DeFi) mechanisms, enabling users to trade
+    freely on PancakeSwap with full transparency and liquidity-based market structure.
+  </p>
+</section>
 
-  <a href="https://whatsapp.com/channel/0029VbBvE8C8vd1LvNkxY41q" target="_blank">
-    <button class="btn green">WhatsApp</button>
-  </a>
+<section>
+  <h2>Contract Address</h2>
+  <p class="box">0xa2ACF85713E58b3f2a343E6830995713b6aea6d4</p>
+</section>
 
-</div>
+<section>
+  <h2>Tokenomics</h2>
 
-<!-- FOOTER -->
-<div class="center" style="padding:20px;color:#64748b;font-size:12px;">
-  © 2026 GRIZLOX — Web3 Ecosystem
-</div>
+  <ul>
+    <li>Community: 40%</li>
+    <li>Liquidity: 20%</li>
+    <li>Marketing: 20%</li>
+    <li>Team: 10%</li>
+    <li>Reserve: 10%</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Roadmap</h2>
+  <ul>
+    <li>✔ Token Creation</li>
+    <li>✔ PancakeSwap Liquidity</li>
+    <li>✔ Website Launch</li>
+    <li>⏳ CoinGecko Listing</li>
+    <li>⏳ CEX Expansion</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Community</h2>
+  <p>Join our global decentralized community and grow the GRZLOX ecosystem.</p>
+</section>
+
+<footer>
+  <p>© 2026 GRZLOX (GRZL). All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
