@@ -9,15 +9,51 @@
       margin:0;
       font-family:Arial;
       color:white;
-      background:linear-gradient(135deg,#020617,#0b1220,#020617);
+      background:#050816;
+      overflow-x:hidden;
     }
 
-    .glass{
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.15);
-      border-radius:16px;
+    /* particles background */
+    canvas{
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:-1;
+    }
+
+    /* navbar */
+    .nav{
+      position:sticky;
+      top:0;
+      display:flex;
+      justify-content:space-between;
+      padding:15px 25px;
+      background:rgba(0,0,0,0.4);
+      backdrop-filter:blur(12px);
+      z-index:10;
+    }
+
+    .nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 10px;
+      font-size:14px;
+    }
+
+    /* glow card */
+    .card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:18px;
       padding:25px;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
+      transition:0.3s;
+      box-shadow:0 0 20px rgba(0,255,150,0.08);
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 0 40px rgba(34,197,94,0.3);
     }
 
     .center{text-align:center;}
@@ -29,40 +65,69 @@
       font-weight:bold;
       cursor:pointer;
       margin:5px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
     }
 
     .green{background:#22c55e;color:black;}
     .blue{background:#2563eb;color:white;}
+
+    /* hero animation */
+    .glowText{
+      font-size:65px;
+      animation:glow 2s infinite alternate;
+    }
+
+    @keyframes glow{
+      from{text-shadow:0 0 10px #22c55e;}
+      to{text-shadow:0 0 40px #3b82f6;}
+    }
 
   </style>
 </head>
 
 <body>
 
+<canvas id="bg"></canvas>
+
+<!-- NAV -->
+<div class="nav">
+  <div><b>GRIZLOX</b></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#token">Token</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
 <!-- HERO -->
-<div class="center" style="padding:120px 20px;">
+<div class="center" style="padding:130px 20px;">
 
   <div style="
-    width:160px;height:160px;margin:auto;border-radius:50%;
+    width:170px;height:170px;margin:auto;border-radius:50%;
     background:linear-gradient(45deg,#22c55e,#3b82f6,#a855f7);
     display:flex;align-items:center;justify-content:center;
-    font-size:26px;font-weight:bold;
-    box-shadow:0 0 60px #22c55e;
+    font-size:30px;font-weight:bold;
+    box-shadow:0 0 90px #22c55e;
   ">
     GRZL
   </div>
 
-  <h1 style="font-size:60px;margin:20px 0;">
+  <h1 class="glowText">
     GRIZLOX (GRZL)
   </h1>
 
-  <p style="color:#94a3b8;font-size:18px;">
-    Next Generation Meme Token on BNB Smart Chain
+  <p style="color:#94a3b8;">
+    Next Generation Meme Token on Binance Smart Chain
   </p>
 
-  <div style="margin-top:30px;">
-    <a href="https://pancakeswap.finance/swap?outputCurrency=0xa2ACF85713E58b3f2a343E6830995713b6aea6d4" target="_blank">
-      <button class="btn green">Buy GRZL</button>
+  <div style="margin-top:25px;">
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0xa2ACF85713E58b3f2a343E6830995713b6aea6d4">
+      <button class="btn green">Buy Now</button>
     </a>
 
     <button class="btn blue">View Chart</button>
@@ -70,107 +135,86 @@
 
 </div>
 
-<!-- STORY -->
-<div class="center" style="padding:80px 20px;">
+<!-- ABOUT -->
+<div id="about" class="center" style="padding:90px 20px;">
 
-  <h2 style="font-size:40px;">The GRIZLOX Story</h2>
+  <h2>About GRIZLOX</h2>
 
-  <div class="glass" style="max-width:900px;margin:auto;line-height:2;color:#cbd5e1;font-size:18px;">
-
-    GRIZLOX (GRZL) is a next-generation meme cryptocurrency inspired by a fictional digital creature called “Grizlox”.  
-    It represents a strong Web3 identity built for community-driven growth and viral crypto culture.
-
-    <br><br>
-
-    Built on Binance Smart Chain (BEP-20), GRZL combines meme energy with decentralized finance concepts.
-
-    <br><br>
-
-    The project focuses on long-term community engagement, branding, and ecosystem development.
-
+  <div class="card" style="max-width:900px;margin:auto;line-height:2;">
+    GRIZLOX is a next-generation meme cryptocurrency built on Binance Smart Chain with strong community-driven growth and Web3 identity.
   </div>
 
 </div>
 
-<!-- WHY -->
-<div class="center" style="padding:80px 20px;background:#0b1220;">
+<!-- TOKEN -->
+<div id="token" class="center" style="padding:90px 20px;background:#0b1220;">
 
-  <h2 style="font-size:40px;">Why GRIZLOX?</h2>
+  <h2>Token Information</h2>
 
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:30px;">
-
-    <div class="glass" style="width:250px;">🧠 Meme Identity</div>
-    <div class="glass" style="width:250px;">🌍 Community Driven</div>
-    <div class="glass" style="width:250px;">⚡ BNB Chain Token</div>
-    <div class="glass" style="width:250px;">🚀 Early Stage Growth</div>
-
-  </div>
-
-</div>
-
-<!-- TOKEN INFO -->
-<div class="center" style="padding:80px 20px;">
-
-  <h2 style="font-size:40px;">Token Information</h2>
-
-  <div class="glass" style="max-width:600px;margin:auto;line-height:2;">
+  <div class="card" style="max-width:600px;margin:auto;line-height:2;">
     Name: GRIZLOX<br>
     Symbol: GRZL<br>
-    Network: Binance Smart Chain<br>
-    Supply: 1,000,000,000 GRZL
+    Network: BSC (BEP-20)<br>
+    Supply: 1,000,000,000
   </div>
 
 </div>
 
 <!-- TOKENOMICS -->
-<div class="center" style="padding:80px 20px;background:#0b1220;">
+<div class="center" style="padding:90px 20px;">
 
-  <h2 style="font-size:40px;">Tokenomics</h2>
+  <h2>Tokenomics</h2>
 
   <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-top:30px;">
 
-    <div class="glass" style="width:200px;">🔥 40% Public</div>
-    <div class="glass" style="width:200px;">💧 20% Liquidity</div>
-    <div class="glass" style="width:200px;">📢 20% Marketing</div>
-    <div class="glass" style="width:200px;">👨‍💻 10% Team</div>
-    <div class="glass" style="width:200px;">🏦 10% Reserve</div>
+    <div class="card" style="width:200px;">🔥 Public 40%</div>
+    <div class="card" style="width:200px;">💧 Liquidity 20%</div>
+    <div class="card" style="width:200px;">📢 Marketing 20%</div>
+    <div class="card" style="width:200px;">👨‍💻 Team 10%</div>
+    <div class="card" style="width:200px;">🏦 Reserve 10%</div>
 
   </div>
 
 </div>
 
 <!-- ROADMAP -->
-<div class="center" style="padding:80px 20px;">
+<div id="roadmap" class="center" style="padding:90px 20px;background:#0b1220;">
 
-  <h2 style="font-size:40px;">Roadmap</h2>
+  <h2>Roadmap</h2>
 
-  <div class="glass" style="max-width:800px;margin:auto;line-height:2;">
-    Phase 1 → Launch<br>
-    Phase 2 → Growth & Listings<br>
-    Phase 3 → Ecosystem Expansion
+  <div class="card" style="max-width:800px;margin:auto;line-height:2;">
+    Phase 1 → Launch & Branding<br>
+    Phase 2 → Community Growth & Listings<br>
+    Phase 3 → Ecosystem & Utility Expansion
   </div>
 
 </div>
 
 <!-- CONTRACT -->
-<div class="center" style="padding:80px 20px;background:#0b1220;">
+<div class="center" style="padding:90px 20px;">
 
-  <h2 style="font-size:40px;">Contract Address</h2>
+  <h2>Contract Address</h2>
 
-  <div class="glass" style="max-width:700px;margin:auto;word-break:break-all;color:#22c55e;">
+  <div class="card" style="max-width:700px;margin:auto;word-break:break-all;">
     0xa2ACF85713E58b3f2a343E6830995713b6aea6d4
   </div>
 
 </div>
 
-<!-- TELEGRAM -->
-<div class="center" style="padding:80px 20px;">
+<!-- CONTACT -->
+<div id="contact" class="center" style="padding:90px 20px;background:#0b1220;">
 
-  <h2 style="font-size:40px;">Community</h2>
+  <h2>Community</h2>
 
-  <a href="https://t.me/GrizloxOfficial" target="_blank">
-    <button class="btn blue">Join Telegram</button>
-  </a>
+  <div class="card" style="max-width:700px;margin:auto;line-height:2;">
+
+    📧 grizloxofficial@gmail.com<br><br>
+
+    <a href="https://t.me/GrizloxOfficial" target="_blank">
+      <button class="btn blue">Join Telegram</button>
+    </a>
+
+  </div>
 
 </div>
 
@@ -178,6 +222,48 @@
 <div class="center" style="padding:30px;color:#64748b;font-size:12px;">
   © 2026 GRIZLOX
 </div>
+
+<!-- PARTICLES SCRIPT -->
+<script>
+const canvas = document.getElementById("bg");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for(let i=0;i<80;i++){
+  particles.push({
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    r:Math.random()*2,
+    dx:(Math.random()-0.5)*1,
+    dy:(Math.random()-0.5)*1
+  });
+}
+
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle="#22c55e";
+
+  particles.forEach(p=>{
+    p.x+=p.dx;
+    p.y+=p.dy;
+
+    if(p.x<0||p.x>canvas.width)p.dx*=-1;
+    if(p.y<0||p.y>canvas.height)p.dy*=-1;
+
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fill();
+  });
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+</script>
 
 </body>
 </html>
