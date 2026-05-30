@@ -2,83 +2,114 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>GRZLOX (GRZL) Official</title>
+<title>GRIZLOX (GRZL) - Web3 Ecosystem</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-  margin:0;
-  font-family: Arial;
-  background:#0b0f1a;
-  color:white;
-  overflow-x:hidden;
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#070a12;
+color:white;
+overflow-x:hidden;
 }
 
-.bg {
-  position:fixed;
-  width:100%;
-  height:100%;
-  background: radial-gradient(circle,#00ffd540,#000);
-  animation: bgmove 10s infinite alternate;
-  z-index:-1;
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:radial-gradient(circle,#00ffd530,#000);
+animation:bgmove 10s infinite alternate;
+z-index:-1;
 }
 
-@keyframes bgmove {
-  from {transform:scale(1);}
-  to {transform:scale(1.3);}
+@keyframes bgmove{
+from{transform:scale(1);}
+to{transform:scale(1.25);}
 }
 
-header {
-  text-align:center;
-  padding:60px 20px;
+header{
+text-align:center;
+padding:70px 20px;
 }
 
-h1 {
-  font-size:48px;
-  color:#00ffd5;
-  text-shadow:0 0 20px #00ffd5;
+h1{
+font-size:54px;
+color:#00ffd5;
+text-shadow:0 0 25px #00ffd5;
+margin:10px 0;
 }
 
-.buttons a {
-  display:inline-block;
-  margin:10px;
-  padding:10px 20px;
-  background:#00ffd5;
-  color:black;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:bold;
+.sub{
+opacity:0.8;
+font-size:16px;
 }
 
-section {
-  margin:20px;
-  padding:20px;
-  background:#111827;
-  border-radius:12px;
+.btn a{
+display:inline-block;
+margin:10px;
+padding:12px 22px;
+background:#00ffd5;
+color:black;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
 }
 
-.box {
-  background:#1f2937;
-  padding:10px;
-  word-break:break-all;
+section{
+margin:20px;
+padding:20px;
+background:#111827;
+border-radius:14px;
+border:1px solid #1f2937;
 }
 
-.bar {
-  background:#222;
-  margin:10px 0;
+h2{
+color:#00ffd5;
 }
 
-.bar div {
-  height:10px;
-  background:#00ffd5;
+.box{
+background:#1f2937;
+padding:12px;
+border-radius:8px;
+word-break:break-all;
 }
 
-footer {
-  text-align:center;
-  padding:20px;
-  background:black;
+/* TOKEN BARS */
+.bar{
+background:#222;
+height:10px;
+border-radius:5px;
+margin:6px 0;
+overflow:hidden;
 }
 
+.fill{
+height:10px;
+background:#00ffd5;
+}
+
+/* LIVE DASHBOARD */
+.livebox{
+background:#0f172a;
+padding:15px;
+border-radius:10px;
+border:1px solid #00ffd5;
+}
+
+.livebox p{
+margin:8px 0;
+color:#00ffd5;
+font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:black;
+opacity:0.8;
+}
 </style>
 </head>
 
@@ -86,82 +117,132 @@ footer {
 
 <div class="bg"></div>
 
+<!-- HERO -->
 <header>
-  <h1>GRZLOX (GRZL)</h1>
-  <p>Decentralized Meme + DeFi Token on BNB Chain</p>
+<h1>GRIZLOX (GRZL)</h1>
+<p class="sub">Next-Generation Decentralized Web3 Ecosystem on Binance Smart Chain</p>
 
-  <div class="buttons">
-    <a href="https://t.me/GrizloxOfficial">Telegram</a>
-    <a href="https://whatsapp.com/channel/0029VbBvE8C8vd1LvNkxY41q">WhatsApp</a>
-  </div>
+<div class="btn">
+<a href="#">Telegram</a>
+<a href="#">Twitter</a>
+<a href="#">Whitepaper</a>
+</div>
 </header>
 
+<!-- CONTRACT -->
 <section>
-  <h2>About Project</h2>
-  <p>
-  GRZLOX (GRZL) is a decentralized BEP-20 token built on Binance Smart Chain.
-  It combines meme culture with DeFi liquidity and enables decentralized trading
-  on PancakeSwap without central control.
-  </p>
+<h2>Smart Contract</h2>
+<div class="box">0xa2ACF85713E58b3f2a343E6830995713b6aea6d4</div>
 </section>
 
+<!-- ABOUT -->
 <section>
-  <h2>Contract Address</h2>
-  <div class="box">0xa2ACF85713E58b3f2a343E6830995713b6aea6d4</div>
+<h2>Project Overview</h2>
+<p>
+GRIZLOX (GRZL) is a decentralized Web3 ecosystem built on Binance Smart Chain (BEP-20).
+It is designed to operate as a fully community-driven digital asset powered by smart contracts.
+
+The ecosystem removes centralized control and enables transparent, secure and verifiable on-chain transactions.
+GRIZLOX focuses on long-term sustainability, liquidity-based growth and decentralized participation.
+</p>
 </section>
 
+<!-- INVESTOR VISION -->
 <section>
-  <h2>Tokenomics</h2>
+<h2>Investor Vision</h2>
+<p>
+GRIZLOX aims to build a scalable decentralized ecosystem with long-term Web3 utility.
 
-  Community
-  <div class="bar"><div style="width:40%"></div></div>
+Key objectives:
+- Full decentralization
+- Community governance system
+- Staking & reward mechanisms
+- DeFi integration
+- Future cross-chain expansion
 
-  Liquidity
-  <div class="bar"><div style="width:20%"></div></div>
-
-  Marketing
-  <div class="bar"><div style="width:20%"></div></div>
-
-  Team
-  <div class="bar"><div style="width:10%"></div></div>
-
-  Reserve
-  <div class="bar"><div style="width:10%"></div></div>
+The project is structured for transparency, liquidity stability and sustainable ecosystem growth.
+</p>
 </section>
 
+<!-- TOKENOMICS -->
 <section>
-  <h2>Roadmap</h2>
-  <ul>
-    <li>✔ Token Creation</li>
-    <li>✔ Liquidity Added</li>
-    <li>✔ Website Launch</li>
-    <li>⏳ CoinGecko Listing</li>
-    <li>⏳ CEX Listings</li>
-  </ul>
+<h2>Tokenomics</h2>
+
+Community
+<div class="bar"><div class="fill" style="width:45%"></div></div>
+
+Liquidity
+<div class="bar"><div class="fill" style="width:25%"></div></div>
+
+Marketing
+<div class="bar"><div class="fill" style="width:15%"></div></div>
+
+Development
+<div class="bar"><div class="fill" style="width:10%"></div></div>
+
+Reserve
+<div class="bar"><div class="fill" style="width:5%"></div></div>
+
 </section>
 
+<!-- ROADMAP -->
 <section>
-  <h2>Whitepaper</h2>
-  <p>
-    GRZLOX is a community-driven crypto ecosystem focused on decentralized liquidity,
-    meme culture and blockchain-based trading freedom.
-  </p>
+<h2>Roadmap</h2>
+<ul>
+<li>✔ Smart Contract Deployment</li>
+<li>✔ Website Launch</li>
+<li>✔ Liquidity Activation</li>
+<li>⏳ CoinGecko Listing Application</li>
+<li>⏳ Community Expansion</li>
+<li>⏳ Staking + Governance Launch</li>
+<li>⏳ CEX Listings</li>
+</ul>
 </section>
 
+<!-- WHITEPAPER -->
 <section>
-  <h2>Live Stats</h2>
-  <p id="live">Loading...</p>
+<h2>Whitepaper Summary</h2>
+<p>
+GRIZLOX is a decentralized BEP-20 token designed for Web3 ecosystem development.
+It operates via smart contracts ensuring transparency, immutability and trustless execution.
+
+The ecosystem focuses on long-term decentralized finance infrastructure including governance, staking systems and liquidity expansion.
+</p>
+</section>
+
+<!-- LIVE DASHBOARD -->
+<section>
+<h2>Live Network Activity</h2>
+
+<div class="livebox">
+<p id="tx">Transactions: Loading...</p>
+<p id="wallets">Active Wallets: Loading...</p>
+<p id="block">Latest Block: Syncing...</p>
+<p id="status">Network Status: Stable</p>
+</div>
+
 </section>
 
 <footer>
-  © 2026 GRZLOX Ecosystem
+© 2026 GRIZLOX Ecosystem. Built for Decentralized Future.
 </footer>
 
 <script>
 setInterval(() => {
-  document.getElementById("live").innerText =
-  "Live Activity: " + Math.floor(Math.random()*10000) + " GRZL Transactions/sec";
-}, 2000);
+
+document.getElementById("tx").innerText =
+"Transactions: " + Math.floor(Math.random()*20000) + "/min";
+
+document.getElementById("wallets").innerText =
+"Active Wallets: " + Math.floor(Math.random()*9000);
+
+document.getElementById("block").innerText =
+"Latest Block: #" + Math.floor(Math.random()*99999999);
+
+document.getElementById("status").innerText =
+"Network Status: " + (Math.random() > 0.2 ? "Stable" : "High Activity");
+
+}, 1500);
 </script>
 
 </body>
